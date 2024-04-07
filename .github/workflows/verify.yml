@@ -15,7 +15,7 @@ jobs:
         with:
           flutter-version: '3.3.3'
       - name: Setup Melos
-        run: melos bootstrap
+        run: flutter pub get & melos bootstrap
       - name: Install dependencies
         run: melos get
       - name: Analyze
