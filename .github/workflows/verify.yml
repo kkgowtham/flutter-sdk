@@ -14,8 +14,10 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.3.3'
-      - name: Setup Melos
-        run: flutter pub get & melos bootstrap
+      - name: Setup Workspace
+        run: flutter pub get
+      - name: Melos Bootstrap
+        run:  melos bootstrap
       - name: Install dependencies
         run: melos get
       - name: Analyze
